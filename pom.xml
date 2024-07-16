@@ -11,7 +11,7 @@
 	<groupId>com.softek</groupId>
 	<artifactId>memoCraft</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MemoCraft</name>
+	<name>memo-craft</name>
 	<description>Out of brain storage</description>
 	<url/>
 	<licenses>
