@@ -13,7 +13,7 @@
 Configure the MongoDB connection in `src/main/resources/application.properties`:
 
 ```properties
-spring.data.mongodb.uri=mongodb://localhost:27017/notesdb
+spring.data.mongodb.uri=mongodb://localhost:27017/memo_craft_text
 
 
 ## API Endpoints

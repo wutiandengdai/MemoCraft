@@ -48,7 +48,7 @@ public class NoteControllerTest {
 
         when(noteService.getNotesByLabel(0, 5, Set.of(NoteTag.PERSONAL.toString())).toList()).thenReturn(notes);
 
-        mockMvc.perform(get("/api/notes"))
+        mockMvc.perform(get("/notes"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].title").value("Title1"))
                 .andExpect(jsonPath("$[1].title").value("Title2"));
