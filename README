@@ -1,0 +1,57 @@
+# MemoCraft
+
+## Getting Started
+
+### Prerequisites
+- Java 17 or later
+- Maven
+- Docker
+- MongoDB
+- PostgreSQL
+
+### Configuration
+Configure the MongoDB connection in `src/main/resources/application.properties`:
+
+```properties
+spring.data.mongodb.uri=mongodb://localhost:27017/notesdb
+
+
+## API Endpoints
+Notes
+    GET /notes: List all notes with pagination and optional tag filtering.
+    Parameters: page, size, tags
+    Response: List of notes (title and created date)
+
+    POST /notes: Create a new note.
+    Request Body: {"title": "Note Title", "text": "Note Text", "tags": ["BUSINESS"]}
+    Response: Created note
+    GET /notes/{id}: Retrieve a specific note by ID.
+
+    Response: Note details
+    PUT /notes/{id}: Update a specific note by ID.
+    Request Body: {"title": "Updated Title", "text": "Updated Text", "tags": ["PERSONAL"]}
+    Response: Updated note
+
+    DELETE /notes/{id}: Delete a specific note by ID.
+    Response: No content
+
+    GET /notes/{id}/stats: Get statistics for a specific note.
+    Response: Word status map (e.g., {"note": 2, "is": 1, "just": 1, "a": 1})
+
+    GET /notes/{id}/text: Get text of a specific note.
+    Response: text of a the note
+
+## Tests
+Run the tests using Maven:
+    mvn test
+
+## CI/CD
+The project is hosted on GitHub with Continuous Integration set up to build the Docker image.
+
+## License
+This project is licensed under the MIT License.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+Feel free to customize the `README.md` further to suit your specific needs.
