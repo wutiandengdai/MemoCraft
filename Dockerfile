@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the jar file from the target directory to the container
-COPY target/MemoCraft.jar app.jar
+COPY target/memo-craft.jar app.jar
 
 # Expose the port the application runs on
 EXPOSE 8080
